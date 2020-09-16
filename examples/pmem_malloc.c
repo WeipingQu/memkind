@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
         print_err_message(err);
         return 1;
     }
+    fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     char *pmem_str1 = NULL;
     char *pmem_str2 = NULL;
@@ -82,6 +83,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 8 MB of 31.9 MB available
     pmem_str2 = (char *)memkind_malloc(pmem_kind, 8 * 1024 * 1024);
@@ -89,6 +91,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str2).\n");
         return 1;
     }
+    fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 16 MB of 23.9 MB available
     pmem_str3 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
@@ -96,6 +99,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str3).\n");
         return 1;
     }
+    fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 16 MB of 7.9 MB available - Out Of Memory expected
     pmem_str4 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);

@@ -740,6 +740,11 @@ MEMKIND_EXPORT void memkind_free(struct memkind *kind, void *ptr)
 #endif
 }
 
+MEMKIND_EXPORT off_t memkind_get_offset(struct memkind *kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->offset;
+}
+
 static int memkind_tmpfile(const char *dir, int *fd)
 {
     static char template[] = "/memkind.XXXXXX";

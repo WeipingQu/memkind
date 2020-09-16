@@ -428,6 +428,8 @@ void memkind_free(memkind_t kind, void *ptr);
 ///
 void *memkind_defrag_reallocate(memkind_t kind, void *ptr);
 
+off_t memkind_get_offset(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif
