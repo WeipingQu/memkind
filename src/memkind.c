@@ -663,7 +663,6 @@ MEMKIND_EXPORT int memkind_create_pmem(const char *dir, size_t max_size,
     }
 
     if (max_size < MEMKIND_PMEM_MIN_SIZE) {
-        
         return MEMKIND_ERROR_INVALID;
     }
 
