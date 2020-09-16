@@ -562,6 +562,11 @@ MEMKIND_EXPORT size_t memkind_malloc_usable_size(struct memkind *kind,
     return size;
 }
 
+MEMKIND_EXPORT void *memkind_base_addr(struct memkind *kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->addr;
+}
+
 MEMKIND_EXPORT void *memkind_malloc(struct memkind *kind, size_t size)
 {
     void *result;

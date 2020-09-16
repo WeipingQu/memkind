@@ -315,6 +315,8 @@ void *memkind_realloc(memkind_t kind, void *ptr, size_t size);
 ///
 void memkind_free(memkind_t kind, void *ptr);
 
+void *memkind_base_addr(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif
