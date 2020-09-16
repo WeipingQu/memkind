@@ -562,7 +562,7 @@ MEMKIND_EXPORT size_t memkind_malloc_usable_size(struct memkind *kind,
     return size;
 }
 
-MEMKIND_EXPORT void *memkind_get_offset(struct memkind *kind) {
+MEMKIND_EXPORT off_t memkind_get_offset(struct memkind *kind) {
     struct memkind_pmem *priv = kind->priv;
     return priv->offset;
 }
