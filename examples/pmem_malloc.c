@@ -72,8 +72,8 @@ int main(int argc, char *argv[])
         return errno ? -errno : 1;
     }
 
-    void *base_addr = memkind_base_addr(pmem_kind);
-    fprintf(stdout, "base_addr *p.\n", base_addr);
+    void *base_offset = memkind_get_offset(pmem_kind);
+    fprintf(stdout, "base_offset *p.\n", base_offset);
 
     char *pmem_str1 = NULL;
     char *pmem_str2 = NULL;
@@ -87,6 +87,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1)\n");
         return errno ? -errno : 1;
     }
+    fprintf(stdout, "pmem_str1 offset: %p.\n", memkind_get_offset(pmem_kind));
     fprintf(stdout, "pmem_str1 *p.\n", pmem_str1);
 
     // allocate 8 MB of 31.9 MB available
@@ -96,6 +97,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str11)\n");
         return errno ? -errno : 1;
     }
+    fprintf(stdout, "pmem_str2 offset: %p.\n", memkind_get_offset(pmem_kind));
     fprintf(stdout, "pmem_str2 *p.\n", pmem_str2);
 
 
@@ -106,6 +108,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str12)\n");
         return errno ? -errno : 1;
     }
+    fprintf(stdout, "pmem_str3 offset: %p.\n", memkind_get_offset(pmem_kind));
     fprintf(stdout, "pmem_str3 *p.\n", pmem_str3);
 
     // allocate 16 MB of 7.9 MB available -- Out Of Memory expected
