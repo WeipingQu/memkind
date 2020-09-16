@@ -119,8 +119,8 @@ main(int argc, char *argv[])
     char *pmem_str12 = NULL;
     char *pmem_str = NULL;
 
-    void *addr = memkind_base_addr(pmem_kind1);
-    fprintf(stdout, "addr: %p", addr);
+    void *base_addr = memkind_base_addr(pmem_kind1);
+    fprintf(stdout, "base_addr: %p", base_addr);
 
     pmem_str10 = (char *)memkind_malloc(pmem_kind1, size);
     if (pmem_str10 == NULL) {
