@@ -524,6 +524,11 @@ MEMKIND_EXPORT void *memkind_calloc(struct memkind *kind, size_t num, size_t siz
     return result;
 }
 
+MEMKIND_EXPORT void *memkind_base_addr(struct memkind *kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->addr;
+}
+
 MEMKIND_EXPORT int memkind_posix_memalign(struct memkind *kind, void **memptr, size_t alignment,
                            size_t size)
 {
