@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
         return errno ? -errno : 1;
     }
     fprintf(stdout, "pmem_str1 offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "pmem_str1 *p.\n", pmem_str1);
+    fprintf(stdout, "pmem_str1 %p.\n", pmem_str1);
 
     // allocate 8 MB of 31.9 MB available
     pmem_str2 = (char *)memkind_malloc(pmem_kind, 8 * 1024 * 1024);
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
         return errno ? -errno : 1;
     }
     fprintf(stdout, "pmem_str2 offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "pmem_str2 *p.\n", pmem_str2);
+    fprintf(stdout, "pmem_str2 %p.\n", pmem_str2);
 
 
     // allocate 16 MB of 23.9 MB available
@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
         return errno ? -errno : 1;
     }
     fprintf(stdout, "pmem_str3 offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "pmem_str3 *p.\n", pmem_str3);
+    fprintf(stdout, "pmem_str3 %p.\n", pmem_str3);
 
     // allocate 16 MB of 7.9 MB available -- Out Of Memory expected
     pmem_str4 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
