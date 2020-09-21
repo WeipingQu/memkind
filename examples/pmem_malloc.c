@@ -35,6 +35,7 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #define PMEM_MAX_SIZE (1024 * 1024 * 32)
 
