@@ -9,7 +9,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5756325e-38aa-42fc-b754-4776871b5a68" name="Default Changelist" comment="" />
+    <list default="true" id="5756325e-38aa-42fc-b754-4776871b5a68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/examples/pmem_malloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pmem_malloc.c" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/pmem_malloc.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="240" column="7" lean-forward="true" selection-start-line="236" selection-start-column="6" selection-end-line="240" selection-end-column="7" />
+            <state relative-caret-position="15">
+              <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -180,7 +182,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10982000" />
+    <option name="totallyTimeSpent" value="11038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2256" y="87" width="2064" height="1218" extended-state="0" />
@@ -254,6 +256,11 @@
           <url>file://$PROJECT_DIR$/examples/pmem_malloc.c</url>
           <line>231</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/pmem_malloc.c</url>
+          <line>227</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -348,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/pmem_malloc.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="240" column="7" lean-forward="true" selection-start-line="236" selection-start-column="6" selection-end-line="240" selection-end-column="7" />
+        <state relative-caret-position="15">
+          <caret line="38" column="39" lean-forward="true" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
         </state>
       </provider>
     </entry>

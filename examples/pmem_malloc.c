@@ -36,7 +36,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define PMEM_MAX_SIZE (1024 * 1024 * 1024)
+#define PMEM_MAX_SIZE (1024 * 1024 * 32)
 
 static char path[PATH_MAX]="/tmp/";
 
@@ -234,11 +234,11 @@ int main(int argc, char *argv[])
 
     // Allocate 16 MB of 7.9 MB available - Out Of Memory expected
     pmem_str4 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
-//    if (pmem_str4 != NULL) {
-//        fprintf(stderr,
-//                "Failure, this allocation should not be possible (expected result was NULL).\n");
-//        return 1;
-//    }
+    if (pmem_str4 != NULL) {
+        fprintf(stderr,
+                "Failure, this allocation should not be possible (expected result was NULL).\n");
+        return 1;
+    }
     fprintf(stdout, "pmem_str4: %p.\n", pmem_str4);
     fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
     fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
