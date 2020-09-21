@@ -83,6 +83,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "ptr: %p.\n", pmem_str1);
     fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
@@ -91,6 +92,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "ptr: %p.\n", pmem_str1);
     fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 8 MB of 31.9 MB available
