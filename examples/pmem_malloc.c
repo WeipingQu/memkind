@@ -96,7 +96,7 @@ int main(int argc, char *argv[])
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
+    pmem_str1 = (char *)memkind_malloc(pmem_kind, 513);
     if (pmem_str1 == NULL) {
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
