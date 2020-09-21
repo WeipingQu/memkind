@@ -436,6 +436,8 @@ size_t memkind_get_current_size(memkind_t kind);
 
 int memkind_get_partition(memkind_t kind);
 
+pthread_key_t memkind_get_arena_key(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif

@@ -759,6 +759,10 @@ MEMKIND_EXPORT int memkind_get_partition(struct memkind *kind) {
     return kind->partition;
 }
 
+MEMKIND_EXPORT pthread_key_t memkind_get_arena_key(struct memkind * kind) {
+    return kind->arena_key;
+}
+
 static int memkind_tmpfile(const char *dir, int *fd)
 {
     static char template[] = "/memkind.XXXXXX";
