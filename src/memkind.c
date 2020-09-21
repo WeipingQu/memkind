@@ -745,6 +745,16 @@ MEMKIND_EXPORT off_t memkind_get_offset(struct memkind *kind) {
     return priv->offset;
 }
 
+MEMKIND_EXPORT size_t memkind_get_max_size(memkind_t kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->max_size;
+}
+
+MEMKIND_EXPORT size_t memkind_get_current_size(memkind_t kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->current_size;
+}
+
 static int memkind_tmpfile(const char *dir, int *fd)
 {
     static char template[] = "/memkind.XXXXXX";

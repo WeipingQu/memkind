@@ -430,6 +430,10 @@ void *memkind_defrag_reallocate(memkind_t kind, void *ptr);
 
 off_t memkind_get_offset(memkind_t kind);
 
+size_t memkind_get_max_size(memkind_t kind);
+
+size_t memkind_get_current_size(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif
