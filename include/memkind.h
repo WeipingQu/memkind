@@ -434,6 +434,8 @@ size_t memkind_get_max_size(memkind_t kind);
 
 size_t memkind_get_current_size(memkind_t kind);
 
+int memkind_get_partition(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif
