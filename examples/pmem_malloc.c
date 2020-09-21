@@ -86,13 +86,13 @@ int main(int argc, char *argv[])
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "---------------------------------------------------\n");
 
-    pmem_str2 = (char *)memkind_malloc(pmem_kind, 60);
+    pmem_str2 = (char *)memkind_malloc(pmem_kind, 37);
     if (pmem_str2 == NULL) {
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
     fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str2);
+    fprintf(stdout, "apply 60: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
     pmem_str3 = (char *)memkind_malloc(pmem_kind, 512);
@@ -104,10 +104,11 @@ int main(int argc, char *argv[])
     fprintf(stdout, "apply 512: pmem_str3: %p.\n", pmem_str3);
     fprintf(stdout, "---------------------------------------------------\n");
 
-    memkind_free(pmem_kind, pmem_str1);
-    fprintf(stdout, "free %p.\n", pmem_str1);
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
+
+    sleep(300);
+
+    memkind_free(pmem_kind, pmem_str2);
+    fprintf(stdout, "free %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
 
