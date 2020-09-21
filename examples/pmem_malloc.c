@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     char *pmem_str4 = NULL;
 
     // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
+    pmem_str1 = (char *)memkind_malloc(pmem_kind, 100);
     if (pmem_str1 == NULL) {
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
@@ -88,7 +88,7 @@ int main(int argc, char *argv[])
     fprintf(stdout, "---------------------------------------------------\n");
 
     // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
+    pmem_str1 = (char *)memkind_malloc(pmem_kind, 60);
     if (pmem_str1 == NULL) {
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
@@ -113,161 +113,6 @@ int main(int argc, char *argv[])
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "---------------------------------------------------\n");
 
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 256);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 256: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 20);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 20: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str2 = (char *)memkind_malloc(pmem_kind, 63);
-    if (pmem_str2 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 63: pmem_str2: %p.\n", pmem_str2);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 2);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    memkind_free(pmem_kind, pmem_str2);
-    fprintf(stdout, "free: pmem_str2: %p.\n", pmem_str2);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 600);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 600: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 100);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 100: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str2 = (char *)memkind_malloc(pmem_kind, 63);
-    if (pmem_str2 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 63: pmem_str2: %p.\n", pmem_str2);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 2);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 4);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 4: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 30);
-    if (pmem_str1 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 30: pmem_str1: %p.\n", pmem_str1);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 8 MB of 31.9 MB available
-    pmem_str2 = (char *)memkind_malloc(pmem_kind, 8 * 1024 * 1024);
-    if (pmem_str2 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str2).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 8M: pmem_str2: %p.\n", pmem_str2);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 16 MB of 23.9 MB available
-    pmem_str3 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
-    if (pmem_str3 == NULL) {
-        fprintf(stderr, "Unable to allocate pmem string (pmem_str3).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 16M: pmem_str3: %p.\n", pmem_str3);
-    fprintf(stdout, "---------------------------------------------------\n");
-
-    // Allocate 16 MB of 7.9 MB available - Out Of Memory expected
-    pmem_str4 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
-    if (pmem_str4 != NULL) {
-        fprintf(stderr,
-                "Failure, this allocation should not be possible (expected result was NULL).\n");
-        return 1;
-    }
-    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "pmem_str4: %p.\n", pmem_str4);
-
-    sprintf(pmem_str1, "Hello world from pmem - pmem_str1.\n");
-    sprintf(pmem_str2, "Hello world from pmem - pmem_str2.\n");
-    sprintf(pmem_str3, "Hello world from persistent memory - pmem_str3.\n");
-
-    fprintf(stdout, "%s", pmem_str1);
-    fprintf(stdout, "%s", pmem_str2);
-    fprintf(stdout, "%s", pmem_str3);
-
-    memkind_free(pmem_kind, pmem_str1);
-    memkind_free(pmem_kind, pmem_str2);
-    memkind_free(pmem_kind, pmem_str3);
 
     err = memkind_destroy_kind(pmem_kind);
     if (err) {
