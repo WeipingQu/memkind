@@ -93,7 +93,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 60: pmem_str2: %p.\n", pmem_str2);
+    fprintf(stdout, "apply 37: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
     pmem_str3 = (char *)memkind_malloc(pmem_kind, 512);
@@ -106,12 +106,21 @@ int main(int argc, char *argv[])
     fprintf(stdout, "---------------------------------------------------\n");
 
 
-    sleep(300);
+//    sleep(120);
 
     memkind_free(pmem_kind, pmem_str2);
     fprintf(stdout, "free %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
+
+    pmem_str2 = (char *)memkind_malloc(pmem_kind, 49);
+    if (pmem_str2 == NULL) {
+        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
+        return 1;
+    }
+    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
+    fprintf(stdout, "apply 49: pmem_str2: %p.\n", pmem_str2);
+    fprintf(stdout, "---------------------------------------------------\n");
 
     err = memkind_destroy_kind(pmem_kind);
     if (err) {
