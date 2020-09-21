@@ -107,6 +107,22 @@ int main(int argc, char *argv[])
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "---------------------------------------------------\n");
 
+    memkind_free(pmem_kind, pmem_str1);
+    fprintf(stdout, "free %p.\n", pmem_str1);
+    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
+    fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
+    fprintf(stdout, "---------------------------------------------------\n");
+
+    // Allocate 512 Bytes of 32 MB available
+    pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
+    if (pmem_str1 == NULL) {
+        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
+        return 1;
+    }
+    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
+    fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
+    fprintf(stdout, "---------------------------------------------------\n");
+
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 256);
     if (pmem_str1 == NULL) {
