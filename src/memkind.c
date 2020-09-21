@@ -788,11 +788,16 @@ static int memkind_tmpfile(const char *dir, int *fd)
     sigfillset(&set);
     (void) sigprocmask(SIG_BLOCK, &set, &oldset);
 
-    if ((*fd = mkstemp(fullname)) < 0) {
+    if ((*fd = shm_open("data1", O_RDWR|O_CREAT, 0777)) < 0) {
         log_err("Could not create temporary file: errno=%d.", errno);
         err = MEMKIND_ERROR_INVALID;
         goto exit;
     }
+//    if ((*fd = mkstemp(fullname)) < 0) {
+//        log_err("Could not create temporary file: errno=%d.", errno);
+//        err = MEMKIND_ERROR_INVALID;
+//        goto exit;
+//    }
 
     (void) unlink(fullname);
     (void) sigprocmask(SIG_SETMASK, &oldset, NULL);
