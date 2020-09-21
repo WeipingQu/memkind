@@ -144,13 +144,13 @@ int main(int argc, char *argv[])
     fprintf(stdout, "---------------------------------------------------\n");
 
     // Allocate 512 Bytes of 32 MB available
-    pmem_str1 = (char *)memkind_malloc(pmem_kind, 63);
-    if (pmem_str1 == NULL) {
+    pmem_str2 = (char *)memkind_malloc(pmem_kind, 63);
+    if (pmem_str2 == NULL) {
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
     fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
-    fprintf(stdout, "apply 63: pmem_str1: %p.\n", pmem_str1);
+    fprintf(stdout, "apply 63: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
     // Allocate 512 Bytes of 32 MB available
@@ -162,6 +162,8 @@ int main(int argc, char *argv[])
     fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
     fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "---------------------------------------------------\n");
+
+    memkind_free(pmem_kind, pmem_str2);
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 600);
@@ -181,6 +183,16 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
     fprintf(stdout, "apply 100: pmem_str1: %p.\n", pmem_str1);
+    fprintf(stdout, "---------------------------------------------------\n");
+
+    // Allocate 512 Bytes of 32 MB available
+    pmem_str2 = (char *)memkind_malloc(pmem_kind, 63);
+    if (pmem_str2 == NULL) {
+        fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
+        return 1;
+    }
+    fprintf(stdout, "arena_addr: %p, offset: %ld.\n", memkind_get_arena_addr(pmem_kind), memkind_get_offset(pmem_kind));
+    fprintf(stdout, "apply 63: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "---------------------------------------------------\n");
 
     // Allocate 512 Bytes of 32 MB available
