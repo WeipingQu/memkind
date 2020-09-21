@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5756325e-38aa-42fc-b754-4776871b5a68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/examples/pmem_malloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pmem_malloc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +184,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13188000" />
+    <option name="totallyTimeSpent" value="13208000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2256" y="87" width="2064" height="1218" extended-state="0" />
@@ -268,6 +268,11 @@
           <url>file://$PROJECT_DIR$/src/memkind.c</url>
           <line>776</line>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/pmem_malloc.c</url>
+          <line>109</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
