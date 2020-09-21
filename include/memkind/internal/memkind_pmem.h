@@ -51,6 +51,7 @@ int memkind_pmem_get_mmap_flags(struct memkind *kind, int *flags);
 
 struct memkind_pmem {
     int fd;
+    void *arena_addr;
     off_t offset;
     size_t max_size;
     pthread_mutex_t pmem_lock;

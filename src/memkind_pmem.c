@@ -277,6 +277,7 @@ MEMKIND_EXPORT void *memkind_pmem_mmap(struct memkind *kind, void *addr,
                        priv->offset)) != MAP_FAILED) {
         priv->offset += size;
         priv->current_size += size;
+        priv->arena_addr = result;
     }
 
     if (pthread_mutex_unlock(&priv->pmem_lock) != 0)

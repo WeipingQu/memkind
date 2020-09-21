@@ -83,8 +83,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
-    fprintf(stdout, "arena key: %d.\n", memkind_get_arena_key(pmem_kind));
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -94,7 +93,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -104,7 +103,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -114,7 +113,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 256: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 256: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -124,6 +123,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 20: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 20: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -133,6 +133,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 63: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 63: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -142,6 +143,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 2: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -151,6 +153,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 600: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 600: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -160,6 +163,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 100: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 100: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -170,6 +174,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 2: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -179,6 +184,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 4: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 4: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -188,6 +194,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str1).\n");
         return 1;
     }
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 30: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 30: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -197,8 +204,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str2).\n");
         return 1;
     }
-    fprintf(stdout, "arena key: %d.\n", memkind_get_arena_key(pmem_kind));
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 8M: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "apply 8M: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -208,8 +214,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unable to allocate pmem string (pmem_str3).\n");
         return 1;
     }
-    fprintf(stdout, "arena key: %d.\n", memkind_get_arena_key(pmem_kind));
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "apply 16M: pmem_str3: %p.\n", pmem_str3);
     fprintf(stdout, "apply 16M: offset: %ld.\n", memkind_get_offset(pmem_kind));
 
@@ -220,7 +225,7 @@ int main(int argc, char *argv[])
                 "Failure, this allocation should not be possible (expected result was NULL).\n");
         return 1;
     }
-    fprintf(stdout, "partition: %d.\n", memkind_get_partition(pmem_kind));
+    fprintf(stdout, "arena_addr: %p.\n", memkind_get_arena_addr(pmem_kind));
     fprintf(stdout, "pmem_str4: %p.\n", pmem_str4);
     fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
 

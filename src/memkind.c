@@ -759,8 +759,13 @@ MEMKIND_EXPORT int memkind_get_partition(struct memkind *kind) {
     return kind->partition;
 }
 
-MEMKIND_EXPORT pthread_key_t memkind_get_arena_key(struct memkind * kind) {
+MEMKIND_EXPORT pthread_key_t memkind_get_arena_key(struct memkind *kind) {
     return kind->arena_zero;
+}
+
+MEMKIND_EXPORT void *memkind_get_arena_addr(struct memkind *kind) {
+    struct memkind_pmem *priv = kind->priv;
+    return priv->arena_addr;
 }
 
 static int memkind_tmpfile(const char *dir, int *fd)

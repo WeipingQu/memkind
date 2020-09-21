@@ -438,6 +438,8 @@ int memkind_get_partition(memkind_t kind);
 
 pthread_key_t memkind_get_arena_key(memkind_t kind);
 
+void *memkind_get_arena_addr(memkind_t kind);
+
 #ifdef __cplusplus
 }
 #endif
