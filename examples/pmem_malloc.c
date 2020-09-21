@@ -36,7 +36,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define PMEM_MAX_SIZE (1024 * 1024 * 32)
+#define PMEM_MAX_SIZE (1024 * 1024 * 1024)
 
 static char path[PATH_MAX]="/tmp/";
 
