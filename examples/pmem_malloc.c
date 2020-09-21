@@ -85,8 +85,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
@@ -96,8 +94,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 512);
@@ -107,8 +103,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 512: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 512: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 256);
@@ -118,8 +112,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 256: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 256: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 20);
@@ -129,8 +121,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 20: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 20: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 63);
@@ -140,8 +130,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 63: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 63: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 2);
@@ -151,8 +139,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 2: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 600);
@@ -162,8 +148,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 600: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 600: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 100);
@@ -173,8 +157,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 100: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 100: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
 
     // Allocate 512 Bytes of 32 MB available
@@ -185,8 +167,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 2: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 2: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 4);
@@ -196,8 +176,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 4: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 4: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 30);
@@ -207,8 +185,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 30: pmem_str1: %p.\n", pmem_str1);
     fprintf(stdout, "apply 30: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 8 MB of 31.9 MB available
     pmem_str2 = (char *)memkind_malloc(pmem_kind, 8 * 1024 * 1024);
@@ -218,8 +194,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 8M: pmem_str2: %p.\n", pmem_str2);
     fprintf(stdout, "apply 8M: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 16 MB of 23.9 MB available
     pmem_str3 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
@@ -229,8 +203,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "apply 16M: pmem_str3: %p.\n", pmem_str3);
     fprintf(stdout, "apply 16M: offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     // Allocate 16 MB of 7.9 MB available - Out Of Memory expected
     pmem_str4 = (char *)memkind_malloc(pmem_kind, 16 * 1024 * 1024);
@@ -241,8 +213,6 @@ int main(int argc, char *argv[])
     }
     fprintf(stdout, "pmem_str4: %p.\n", pmem_str4);
     fprintf(stdout, "offset: %ld.\n", memkind_get_offset(pmem_kind));
-    fprintf(stdout, "memkind_get_max_size: %ld.\n", memkind_get_max_size(pmem_kind));
-    fprintf(stdout, "memkind_get_current_size: %ld.\n", memkind_get_current_size(pmem_kind));
 
     sprintf(pmem_str1, "Hello world from pmem - pmem_str1.\n");
     sprintf(pmem_str2, "Hello world from pmem - pmem_str2.\n");
