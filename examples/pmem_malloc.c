@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
     fprintf(stdout, "---------------------------------------------------\n");
 
 
-//    sleep(120);
+    sleep(120);
 
     memkind_free(pmem_kind, pmem_str2);
     fprintf(stdout, "free %p.\n", pmem_str2);
