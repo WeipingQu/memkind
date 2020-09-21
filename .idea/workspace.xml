@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5756325e-38aa-42fc-b754-4776871b5a68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/examples/pmem_malloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/examples/pmem_malloc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/memkind.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/memkind.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,24 +22,24 @@
     <session id="-1580156066">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="c" value="77" />
-          <entry key="h" value="30" />
+          <entry key="c" value="79" />
+          <entry key="h" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="107" />
+          <entry key="ObjectiveC" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="c" value="713" />
+          <entry key="c" value="717" />
           <entry key="h" value="184" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="897" />
+          <entry key="ObjectiveC" value="901" />
         </counts>
       </usages-collector>
     </session>
@@ -50,10 +50,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/pmem_malloc.c">
+        <entry file="file://$PROJECT_DIR$/src/memkind.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
-              <caret line="199" column="74" selection-start-line="199" selection-start-column="74" selection-end-line="199" selection-end-column="74" />
+            <state relative-caret-position="706">
+              <caret line="762" column="27" selection-start-line="762" selection-start-column="27" selection-end-line="762" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/examples/pmem_example.c" />
         <option value="$PROJECT_DIR$/src/memkind_pmem.c" />
         <option value="$PROJECT_DIR$/include/memkind.h" />
-        <option value="$PROJECT_DIR$/src/memkind.c" />
         <option value="$PROJECT_DIR$/examples/pmem_malloc.c" />
+        <option value="$PROJECT_DIR$/src/memkind.c" />
       </list>
     </option>
   </component>
@@ -183,7 +183,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12490000" />
+    <option name="totallyTimeSpent" value="12564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2256" y="87" width="2064" height="1218" extended-state="0" />
@@ -258,6 +258,11 @@
           <line>208</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/examples/pmem_malloc.c</url>
+          <line>214</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -329,6 +334,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/pmem_malloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="199" column="74" selection-start-line="199" selection-start-column="74" selection-end-line="199" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/memkind.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1166">
+          <caret line="438" selection-start-line="438" selection-end-line="438" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/memkind/internal/memkind_regular.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/memkind/internal/memkind_private.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="844">
@@ -336,24 +358,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/memkind.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="438" selection-start-line="438" selection-end-line="438" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/memkind.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="706">
           <caret line="762" column="27" selection-start-line="762" selection-start-column="27" selection-end-line="762" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pmem_malloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="199" column="74" selection-start-line="199" selection-start-column="74" selection-end-line="199" selection-end-column="74" />
         </state>
       </provider>
     </entry>

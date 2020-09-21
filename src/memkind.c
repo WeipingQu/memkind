@@ -760,7 +760,7 @@ MEMKIND_EXPORT int memkind_get_partition(struct memkind *kind) {
 }
 
 MEMKIND_EXPORT pthread_key_t memkind_get_arena_key(struct memkind * kind) {
-    return kind->arena_key;
+    return kind->arena_zero;
 }
 
 static int memkind_tmpfile(const char *dir, int *fd)
