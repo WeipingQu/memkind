@@ -164,6 +164,8 @@ int main(int argc, char *argv[])
     fprintf(stdout, "---------------------------------------------------\n");
 
     memkind_free(pmem_kind, pmem_str2);
+    fprintf(stdout, "free: pmem_str2: %p.\n", pmem_str2);
+    fprintf(stdout, "---------------------------------------------------\n");
 
     // Allocate 512 Bytes of 32 MB available
     pmem_str1 = (char *)memkind_malloc(pmem_kind, 600);
